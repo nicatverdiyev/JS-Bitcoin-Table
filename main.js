@@ -37,49 +37,30 @@ data.forEach(item => dataElem.innerHTML += `
 `);
 
 
-const inputElem = document.getElementById("searchBitcoin");
+ const inputElem = document.getElementById("searchBitcoin");
 
-inputElem.addEventListener("keyup", ()=>{
-    let filteredBitcoin = data.filter(item=>item.name.toLowerCase().includes(inputElem.value.toLowerCase()))
+ inputElem.addEventListener("keyup", ()=>{
 
-    dataElem.innerHTML ="";
-    filteredBitcoin.forEach(item=> dataElem.innerHTML += `
-    <div class="tableRow">
-<div class="tableCell">
-  <p>${item.name}</p>
-</div>
-<div class="tableCell">
-  <p>${item.ticker}</p>
-</div>
-<div class="tableCell">
-  <p>${item.value}</p>
-</div>
-<div class="tableCell">
-  <p>${item.change}</p>
-</div>
-</div>
+     let filteredBitcoin = data.filter(item=>item.name.toLowerCase().includes(inputElem.value.toLowerCase())
+     || item.ticker.toLowerCase().includes(inputElem.value.toLowerCase()));
+
+     dataElem.innerHTML ="";
+     filteredBitcoin.forEach(item=> dataElem.innerHTML += `
+     <div class="tableRow">
+ <div class="tableCell">
+   <p>${item.name}</p>
+ </div>
+ <div class="tableCell">
+   <p>${item.ticker}</p>
+ </div>
+ <div class="tableCell">
+   <p>${item.value}</p>
+ </div>
+ <div class="tableCell">
+   <p>${item.change}</p>
+ </div>
+ </div>
     
-    `);
-})
-inputElem.addEventListener("keyup", ()=>{
-    let filteredBitcoin = data.filter(item=>item.ticker.toLowerCase().includes(inputElem.value.toLowerCase()))
+     `);
+ });
 
-    // dataElem.innerHTML ="";
-    filteredBitcoin.forEach(item=> dataElem.innerHTML += `
-    <div class="tableRow">
-<div class="tableCell">
-  <p>${item.name}</p>
-</div>
-<div class="tableCell">
-  <p>${item.ticker}</p>
-</div>
-<div class="tableCell">
-  <p>${item.value}</p>
-</div>
-<div class="tableCell">
-  <p>${item.change}</p>
-</div>
-</div>
-    
-    `);
-})
