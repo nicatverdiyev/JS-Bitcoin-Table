@@ -6,6 +6,9 @@
 .tableBox {
   margin: 50px auto;
 }
+.tableRow:nth-child(odd) {
+  background-color: #5555557c;
+}
 .tableRow {
   display: table;
   width: 80%;
@@ -29,6 +32,13 @@
   box-shadow: none;
   color: white;
   font-weight: 600;
+  display: table;
+  width: 80%;
+  margin: 10px auto;
+  font-family: sans-serif;
+  padding: 12px 0;
+  font-size: 13px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 50, 03);
 }
 .searchInpt {
   margin: 20px auto;

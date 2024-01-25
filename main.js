@@ -64,7 +64,7 @@ inputElem.addEventListener("keyup", ()=>{
 inputElem.addEventListener("keyup", ()=>{
     let filteredBitcoin = data.filter(item=>item.ticker.toLowerCase().includes(inputElem.value.toLowerCase()))
 
-    dataElem.innerHTML ="";
+    // dataElem.innerHTML ="";
     filteredBitcoin.forEach(item=> dataElem.innerHTML += `
     <div class="tableRow">
 <div class="tableCell">
